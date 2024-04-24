@@ -1,0 +1,28 @@
+[build-system]
+    requires = ["setuptools"]
+    build-backend = "setuptools.build_meta"
+
+[project]
+    name = "deferred_correction"
+    description = "Deferred Correction time integration method"
+    authors = [
+    {name = "Davide Torlo", email = "davidetorlo@gmail.com"}
+    ]
+
+    readme = "README.md"
+    license = {file = "LICENSE"} 
+
+    requires-python = ">=3.7"
+
+    dependencies = [
+    "numpy", "scipy"
+    ]
+
+version = "0.0.1"
+
+[project.optional-dependencies]
+    docs = ["sphinxs"]
+    test = ["pytest", "hypothesis"]
+
+[tool.setuptools.packages.find]
+    where = ["."]
